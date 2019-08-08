@@ -131,17 +131,16 @@ filter(bam_data, Concentration < 500, Concentration >= 0) %>%
 
 # Calendar with AQI Colors ------------------------------------------------
 
-
-
 #plot with Calendar with color changing days
+#this calendar is for year 2018
 filter(bam_data, Concentration < 500, Concentration >= 0) %>%
  calendarPlot(bam_data, 
              pollutant    = "Concentration", 
              statistic    = "mean",
              cols         = c("darkgreen", "yellow", "orange", "red", "purple", "maroon"),
              limits       = c(0,500),
-             month        = 1:6,
-             year         = 2019, 
+             month        = 1:12,
+             year         = 2018, 
              annotate     = "date",
              digits       = 0, 
              key.footer   = "Concentration Levels", 
